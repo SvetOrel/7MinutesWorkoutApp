@@ -58,10 +58,12 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         try{
             val soundURI = Uri.parse("android.resource://com.example.a7minutesworkout/"+R.raw.press_start)
+            player = MediaPlayer.create(applicationContext,soundURI)
+            player?.isLooping = false
+            player?.start()
         }catch(e: Exception){
             e.printStackTrace()
         }
-
 
         if(restTimer != null){
             restTimer?.cancel()
@@ -148,6 +150,10 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         if(tts != null){
             tts!!.stop()
             tts!!.shutdown()
+        }
+
+        if(player != null){
+            player!!.stop()
         }
 
         binding = null
