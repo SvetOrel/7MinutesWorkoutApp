@@ -56,9 +56,13 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         binding?.tvNextExerciseName?.visibility = View.VISIBLE
         binding?.tvNextExerciseName?.text = exerciseList!![currentExercisePosition + 1].getName()
 
-        //try{
-            //val soundURI = Uri.parse()
-        //}
+        try{
+            val soundURI = Uri.parse("android.resource://com.example.a7minutesworkout/"+R.raw.press_start)
+        }catch(e: Exception){
+            e.printStackTrace()
+        }
+
+
         if(restTimer != null){
             restTimer?.cancel()
             restProgress = 0
