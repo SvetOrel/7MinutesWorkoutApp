@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".FinishActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_finish_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#FFFF"/>
+
+    <TextView
+        android:id="@+id/tvFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="35dp" />
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/item_circular_color_accent_border"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivFinish"
+            android:contentDescription="@string/finish_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_action_done" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvFinishText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Congratulations!"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvFinishTextSentence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You have completed the workout!"
+        android:textColor="#212121"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:background="@color/colorAccent"
+        android:text="Finish"
+        android:textColor="#FFFF"
+        android:textSize="18sp"/>
+
+</LinearLayout>
