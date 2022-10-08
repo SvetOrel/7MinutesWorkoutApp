@@ -41,7 +41,7 @@
         android:id="@+id/flBMI"
         app:layout_constraintTop_toBottomOf="@+id/flStart"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/flHistory"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -57,6 +57,7 @@
             />
     </FrameLayout>
     <TextView
+        android:id="@+id/tvCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calculator"
@@ -66,6 +67,39 @@
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/flBMI"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvHistory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <FrameLayout
+        android:id="@+id/flHistory"
+        app:layout_constraintTop_toBottomOf="@+id/flStart"
+        app:layout_constraintStart_toEndOf="@id/flBMI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/item_circular_color_accent_background">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calendar"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:layout_gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/default_button_text_size"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/flHistory"
+        app:layout_constraintStart_toEndOf="@+id/tvCalculator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />
