@@ -66,9 +66,8 @@
         android:textSize="@dimen/default_button_text_size"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/flBMI"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvHistory"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/flBMI"
+        app:layout_constraintEnd_toEndOf="@id/flBMI"
         />
 
     <FrameLayout
@@ -85,7 +84,6 @@
             android:layout_height="wrap_content"
             android:src="@drawable/calendar"
             android:layout_gravity="center"
-            android:textColor="@color/white"
             />
     </FrameLayout>
 
@@ -99,8 +97,7 @@
         android:textSize="@dimen/default_button_text_size"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/flHistory"
-        app:layout_constraintStart_toEndOf="@+id/tvCalculator"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/flHistory"
+        app:layout_constraintEnd_toEndOf="@id/flHistory"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
